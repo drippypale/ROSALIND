@@ -1,3 +1,11 @@
+'''
+Drippypale
+drippypale@gmail.com
+
+problem link: https://rosalind.info/problems/pdst/
+
+'''
+
 from ast import Num
 from helper import FASTA
 

@@ -1,3 +1,11 @@
+'''
+Drippypale
+drippypale@gmail.com
+
+problem link: https://rosalind.info/problems/edta/
+
+'''
+
 from helper import FASTA
 
 '''
