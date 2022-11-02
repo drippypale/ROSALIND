@@ -1,9 +1,15 @@
+'''
+Drippypale
+drippypale@gmail.com
+
+problem link: https://rosalind.info/problems/gaff/
+
+'''
+
 from multiprocessing.spawn import import_main_path
 import numpy as np
 
 import sys
-import numpy
-numpy.set_printoptions(threshold=sys.maxsize)
 
 BLOSUM_index: dict  # holds the index of each amino in the BLOSUM matrix
 BLOSUM: np.ndarray  # BLOSUM matrix
