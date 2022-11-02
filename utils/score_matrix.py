@@ -1,7 +1,10 @@
 from typing import Tuple
 import numpy as np
 
-def read_score_matrix(path) -> Tuple[dict, np.ndarray]:
+import os
+import pathlib
+
+def _read_score_matrix(path) -> Tuple[dict, np.ndarray]:
     alphabet_index: dict
     matrix: np.ndarray
 
@@ -14,3 +17,7 @@ def read_score_matrix(path) -> Tuple[dict, np.ndarray]:
             for j, j_ in enumerate(lines[i].split(' ')):
                 matrix[i - 1, j] = int(j_)
     return alphabet_index, matrix
+
+
+BLOSUM62            = _read_score_matrix(os.path.join(pathlib.Path(__file__).parent.resolve(), 'score_matrices/BLOSUM62'))
+PAM250              = _read_score_matrix(os.path.join(pathlib.Path(__file__).parent.resolve(), 'score_matrices/PAM250'))

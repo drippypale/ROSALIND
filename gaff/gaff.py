@@ -10,22 +10,9 @@ Problem:
 from multiprocessing.spawn import import_main_path
 import numpy as np
 
-import sys
+from utils.score_matrix import BLOSUM62
 
-BLOSUM_index: dict  # holds the index of each amino in the BLOSUM matrix
-BLOSUM: np.ndarray  # BLOSUM matrix
-
-with open('BLOSUM62', 'r') as f:
-    lines = f.read().splitlines()
-    BLOSUM_index = {c: i for i, c in enumerate(lines[0].split(' '))}
-    n = len(BLOSUM_index)
-    BLOSUM = np.zeros(shape=(n, n), dtype=np.int64)
-    for i in range(1, n + 1):
-        for j, j_ in enumerate(lines[i].split(' ')):
-            BLOSUM[i - 1, j] = int(j_)
-
-# print(BLOSUM_index)
-# print(BLOSUM)
+BLOSUM_index, BLOSUM = BLOSUM62
 
 a, b = -11, -1 # gap penalty: a + b(L - 1)
 

@@ -9,14 +9,14 @@ Problem:
 '''
 
 
-from utils.score_matrix import read_score_matrix
+from utils.score_matrix import PAM250
 
 '''
 I implemented a module to read the score matrix through the file,
 returning the matrix alphabet index and the matrix itself as an Numpy ndArray
 '''
 
-PAM_index, PAM = read_score_matrix('PAM250')
+PAM_index, PAM = PAM250
 
 g = -5 # gap penalty: gL (linear penalty)
 
