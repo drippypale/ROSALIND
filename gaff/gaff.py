@@ -2,10 +2,11 @@
 Drippypale
 drippypale@gmail.com
 
-problem link: https://rosalind.info/problems/gaff/
+Problem:
+    name: Global Alignment with Scoring Matrix and Affine Gap Penalty
+    link: https://rosalind.info/problems/gaff/
 
 '''
-
 from multiprocessing.spawn import import_main_path
 import numpy as np
 
